@@ -1,0 +1,97 @@
+import xml.etree.ElementTree as et
+import threading
+
+def getdata(f):
+    xmltree = et.parse(f)
+    root = xmltree.getroot()
+    print root.tag
+    a = []
+    for child in root:
+        a.append(int(child.text))
+        print child.tag,child.text
+    print a
+    print
+    return a
+
+def partition(a,l,r):
+    pivot = a[l]
+    i=l+1
+    j=r
+    while i<=j:
+        while i<len(a) and pivot >= a[i]:
+            i+=1
+        while pivot < a[j]:
+            j-=1
+        if i<j:
+            a[i],a[j] = a[j],a[i]
+    a[j],a[l] = pivot,a[j]
+    return j
+
+def quicksort(a,l,r):
+
+    if l<=r:
+        mid = partition(a,l,r)
+        print threading.current_thread().getName(),"this thread found mid = ",mid
+	# quicksort(l,mid-1)
+	# quicksort(mid+1,r)
+        t1 = threading.Thread(target=quicksort,args=(a,l,mid-1))
+        t1.start()
+        t2 = threading.Thread(target=quicksort,args=(a,mid+1,r))
+        t2.start()
+
+        t1.join();
+        t2.join();
+    return a
+
+if __name__ == "__main__":
+	a = getdata('input.xml')
+	quicksort(a,0,len(a)-1)
+	print "Sorted array:",a
+	
+	
+	
+import unittest
+from Quicksort import *
+
+class Mytest(unittest.TestCase):
+	def testfun(self):
+		try:
+			a = getdata('test.xml')
+			if a==None:
+				self.fail('failed')
+		except:
+			self.fail('Failed... Cannot Load file')
+
+	def testfun1(self):
+		self.assertEqual(getdata('test.xml'), [23, 2, 21])
+
+	def testfun2(self):
+		a = getdata('test.xml')
+		self.assertEqual(quicksort(a, 0, len(a)-1), [2, 21, 23])
+
+unittest.main()
+
+
+
+
+<list>
+    <data>23</data>
+    <data>2</data>
+    <data>21</data>
+    <data>12</data>
+    <data>1</data>
+    <data>2</data>
+    <data>31</data>
+    <data>41</data>
+    <data>12</data>
+    <data>88</data>
+</list>	
+	
+	
+	
+	
+	
+	
+	
+	
+	

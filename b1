@@ -1,0 +1,73 @@
+global N
+N=8
+def printsolution(board):
+    for i in range(N):
+        for j in range(N):
+            print board[i][j],
+        print
+
+def isSafe(board,row,col):
+    for i in range(col):
+        if board[row][i]==1:
+            return False
+
+    for i,j in zip(range(row,-1,-1),range(col,-1,-1)):
+        if board[i][j]==1:
+            return False
+
+    for i,j in zip(range(row,N,1),range(col,-1,-1)):
+        if board[i][j]==1:
+            return False
+    return True
+
+def solveNQUtil(board,col):
+    if col>=N:
+        return True
+
+    for i in range(N):
+        if isSafe(board,i,col):
+            board[i][col]=1
+            if solveNQUtil(board,col+1)==True:
+                return True
+            board[i][col]=0
+    return False
+
+def solveNQ():
+    #board=[[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]]
+    board=[[0 for x in range(N)] for x in range(N)]
+
+    if solveNQUtil(board,0)==False:
+        print "Solution does not exist"
+        return False
+    printsolution(board)
+    return True
+
+solveNQ()
+
+
+{"start":2}
+
+
+
+
+
+
+
+
+
+
+import json
+import unittest
+
+class MyTestCases(unittest.TestCase):
+  def test_positive(self):
+    self.assertEqual(run("inp2.json"), True)
+  def test_negative(self):
+    self.assertEqual(run("inp3.json"), False)
+
+run('inp1.json')
+print "---TESTING---"
+unittest.main()
+run('inp1.json')
+print "---TESTING---"
+unittest.main()
