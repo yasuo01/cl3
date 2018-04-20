@@ -1,0 +1,48 @@
+--2018-04-19 23:29:46--  http://tiny.cc/cl3/a3
+Resolving tiny.cc (tiny.cc)... 192.241.240.89
+Connecting to tiny.cc (tiny.cc)|192.241.240.89|:80... connected.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: https://tiny.cc/cl3/a3 [following]
+--2018-04-19 23:29:46--  https://tiny.cc/cl3/a3
+Connecting to tiny.cc (tiny.cc)|192.241.240.89|:443... connected.
+HTTP request sent, awaiting response... 303 See Other
+Location: http://nabzsoftware.com/types-of-threats/cryptowall-3-0/a3 [following]
+--2018-04-19 23:29:47--  http://nabzsoftware.com/types-of-threats/cryptowall-3-0/a3
+Resolving nabzsoftware.com (nabzsoftware.com)... 218.93.250.18
+Connecting to nabzsoftware.com (nabzsoftware.com)|218.93.250.18|:80... failed: Connection timed out.
+Retrying.
+
+--2018-04-20 02:07:47--  (try: 2)  http://nabzsoftware.com/types-of-threats/cryptowall-3-0/a3
+Connecting to nabzsoftware.com (nabzsoftware.com)|218.93.250.18|:80... failed: Connection timed out.
+Retrying.
+
+--2018-04-20 02:09:56--  (try: 3)  http://nabzsoftware.com/types-of-threats/cryptowall-3-0/a3
+Connecting to nabzsoftware.com (nabzsoftware.com)|218.93.250.18|:80... failed: Connection timed out.
+Retrying.
+
+--2018-04-20 02:12:07--  (try: 4)  http://nabzsoftware.com/types-of-threats/cryptowall-3-0/a3
+Connecting to nabzsoftware.com (nabzsoftware.com)|218.93.250.18|:80... failed: Connection timed out.
+Retrying.
+
+--2018-04-20 02:14:18--  (try: 5)  http://nabzsoftware.com/types-of-threats/cryptowall-3-0/a3
+Connecting to nabzsoftware.com (nabzsoftware.com)|218.93.250.18|:80... failed: Connection timed out.
+Retrying.
+
+--2018-04-20 02:16:30--  (try: 6)  http://nabzsoftware.com/types-of-threats/cryptowall-3-0/a3
+Connecting to nabzsoftware.com (nabzsoftware.com)|218.93.250.18|:80... failed: Connection timed out.
+Retrying.
+
+--2018-04-20 02:18:43--  (try: 7)  http://nabzsoftware.com/types-of-threats/cryptowall-3-0/a3
+Connecting to nabzsoftware.com (nabzsoftware.com)|218.93.250.18|:80... failed: Connection timed out.
+Retrying.
+
+--2018-04-20 02:20:58--  (try: 8)  http://nabzsoftware.com/types-of-threats/cryptowall-3-0/a3
+Connecting to nabzsoftware.com (nabzsoftware.com)|218.93.250.18|:80... failed: Connection timed out.
+Retrying.
+
+--2018-04-20 02:23:13--  (try: 9)  http://nabzsoftware.com/types-of-threats/cryptowall-3-0/a3
+Connecting to nabzsoftware.com (nabzsoftware.com)|218.93.250.18|:80... failed: Connection timed out.
+Retrying.
+
+--2018-04-20 08:33:29--  (try:10)  http://nabzsoftware.com/types-of-threats/cryptowall-3-0/a3
+Connecting to nabzsoftware.com (nabzsoftware.com)|218.93.250.18|:80... failed: Network is unreachable.
